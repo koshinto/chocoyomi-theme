@@ -35,6 +35,8 @@ header {
   border-bottom: 1px #ccc solid;
 }
 
+header a { text-decoration: none; }
+
 .blogtitle {
   display: block;
 }
