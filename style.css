@@ -6,14 +6,27 @@ Description: This is my Original Theme
 Version: 1.0
 */
 
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap');
+}
+
 body {
   margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .container { 
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.main::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 /* ヘッダー */
@@ -70,4 +83,104 @@ footer {
   height: 350px;
   color: #7fb39e;
   background-color: #cefeeb;
+}
+
+/* メインカラム */
+.contents {
+  display: inline-block;
+  margin: 20px 0 0 0;
+  max-width: 740px;
+  min-height: 500px;
+}
+
+article h1 {
+  font-weight: 900;
+}
+
+/* 投稿 */
+.postlink {
+  display: inline-block;
+  width: 350px;
+  height: 420px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  vertical-align: top;
+  text-decoration: none;
+  border-radius: 15px;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.wp-post-image {
+  margin-top: 0;
+  border-radius: 15px 15px 0 0;
+}
+
+.thumbnailparagraph {
+  margin: 0;
+}
+
+.excerpt {
+  padding: 0 10px;
+}
+
+.excerpt p, .excerpt h1 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* 投稿日、投稿者情報 */
+.postinfo {
+  font-size: 0.8em;
+  color: #777;
+}
+
+.postinfo::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.postdate { float: left; }
+
+.postauthor { float: right; }
+
+/* サイドバー */
+.side {
+  max-width: 350px;
+  float: right;
+}
+
+#searchform {
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  background-color: white;
+  /* border: black solid 2px; */
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+/* 検索 */
+#searchform input {
+  font-size: 1.1em;
+  border: none;
+  padding: 10px 10px;
+  width: 80%;
+  outline: none;
+}
+
+#searchform button {
+  border: none;
+  background-color: white;
+}
+
+.ad {
+  width: 350px;
+  height: 350px;
+  color: white;
+  background-color: black; 
 }
