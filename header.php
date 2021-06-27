@@ -19,7 +19,7 @@
     <h1><a href="<?php echo home_url(); ?>">
       <span class="headertext1">Chocoyomi</span><span class="headertext2">WebMagazine</span>
     </a></h1>
-    <ul>
+    <ul id="share-button">
       <li><a href="https://twitter.com/intent/tweet?text=<?php bloginfo('name'); ?> <?php echo get_site_url(); ?> <twitter account>"><i class="fab fa-twitter"></i></a></li>
       <li><a href="http://www.facebook.com/sharer.php?u=<?php echo get_site_url(); ?>&amp;t=<?php bloginfo('name'); ?>"><i class="fab fa-facebook"></i></a></li>
       <li><a href="https://social-plugins.line.me/lineit/share?url=https://www.yns-sanda.jp/"><i class="fab fa-line"></i></a></li>

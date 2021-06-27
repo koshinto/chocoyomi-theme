@@ -53,10 +53,11 @@
                   <div class="user-reaction user-reaction-comment">
                     <span class="user-reaction-icon"><i class="fas fa-comment"></i></span><?php comments_number('0', '1', '%'); ?>
                   </div>
-                  <div class="user-reaction user-reaction-like">
+                  <!-- 実装予定 -->
+                  <!-- <div class="user-reaction user-reaction-like"> -->
                     <!-- 未実装 -->
-                    <span class="user-reaction-icon"><i class="fas fa-heart"></i></span>0 
-                  </div>
+                    <!-- <span class="user-reaction-icon"><i class="fas fa-heart"></i></span>2 -->
+                  <!-- </div> -->
                 </div>
               </div>
             </a>

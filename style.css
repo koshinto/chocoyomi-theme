@@ -71,6 +71,8 @@ header a { text-decoration: none; }
 }
 
 /* シェアボタン */
+#share-button { display: none; }
+
 .blogtitle ul {
   margin-top: 5px;
   padding: 0;
@@ -232,6 +234,8 @@ article h1 {
 
 /*  */
 @media (min-width: 720px) {
+  #share-button { display: inline; }
+  
   .card {
     width: calc(95% / 2);
   }
