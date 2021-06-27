@@ -1,38 +1,69 @@
 <?php get_header(); ?>
 
 <div class="container main">
-  <div class="contents">
+  <?php if(is_single()): ?>
+    <!-- 小ページ -->
+    <h1><?php the_title(); ?></h1>
+    <div class="postinfo">
+    <ul>
+      <li>
+        <span class="info-icon"><i class="far fa-calendar-alt"></i></span><?php the_time('Y年m月d日'); ?>
+      </li>
+      <li>
+        <span class="info-icon"><i class="fas fa-tag"></i></span><?php the_category(', ') ?>
+      </li>
+      <li>
+        <span class="info-icon"><i class="fas fa-user-alt"></i></span>
+        <?php
+          $author = get_userdata($post -> post_author);
+          echo $author->display_name;
+        ?>
+      </li>
+    </ul>
+  </div>
+    <?php the_post_thumbnail() ?>
+    <?php the_content(); ?>
+  <?php else: ?>
+    <!-- インデックス -->
     <?php if(have_posts()): ?>
-      <?php while(have_posts()): the_post(); ?>
-        <a class="postlink" href="<?php the_permalink(); ?>">
-          <article <?php post_class(); ?>>
-            <?php if(has_post_thumbnail()): ?>
-              <p class="thumbnailparagraph"><?php the_post_thumbnail(array(350, 240)); ?></p>
-            <?php else: ?>
-              <p style="width: 350px; height: 240px;"></p>
-            <?php endif; ?>
-            <div class="excerpt">
-              <!-- 記事の投稿日と投稿者情報 -->
-              <p class="postinfo">
-                <span class="postdate">
-                  <i class="far fa-calendar-alt"></i>  <?php the_time('Y年m月d日'); ?>
-                </span> 
-                <span class="postauthor">
-                  <i class="fas fa-user-alt">  </i><?php the_author(); ?>
-                </span>
-              </p>
-              <h1><?php the_title(); ?></h1>
-              <p><?php the_excerpt(); ?></p>
-            </div>
-          </article>
-        </a>
-      <?php endwhile; ?>
+      <div class="cardlayout">
+        <?php while(have_posts()): the_post(); ?>
+          <section class="card">
+            <a class="postlink" href="<?php the_permalink(); ?>">
+              <?php if(has_post_thumbnail()): ?>
+                <figure class="card-thumbnail"><?php the_post_thumbnail(array(360, 240)); ?></figure>
+              <?php endif; ?>
+              <div class="card-text">
+                <h2 class="card-title"><?php the_title(); ?></h2>
+                <div class="postinfo">
+                  <ul>
+                    <li>
+                      <span class="info-icon"><i class="far fa-calendar-alt"></i></span><?php the_time('Y年m月d日'); ?>
+                    </li>
+                    <li>
+                      <span class="info-icon"><i class="fas fa-tag"></i></span><?php the_category(', ') ?>
+                    </li>
+                    <li>
+                      <span class="info-icon"><i class="fas fa-user-alt"></i></span><?php the_author(); ?>
+                    </li>
+                  </ul>
+                </div>
+                <p><?php the_excerpt(); ?></p>
+                <div class="user-reaction-wrap">
+                  <div class="user-reaction user-reaction-comment">
+                    <span class="user-reaction-icon"><i class="fas fa-comment"></i></span><?php comments_number('0', '1', '%'); ?>
+                  </div>
+                  <div class="user-reaction user-reaction-like">
+                    <!-- 未実装 -->
+                    <span class="user-reaction-icon"><i class="fas fa-heart"></i></span>0 
+                  </div>
+                </div>
+              </div>
+            </a>
+          </section>
+        <?php endwhile; ?>
+      </div>
     <?php endif; ?>
-  </div>
-
-  <div class="side">
-    <?php get_search_form(); ?>
-    <div class="ad"></div>
-  </div>
+  <?php endif; ?>
 </div>
 <?php get_footer(); ?>
