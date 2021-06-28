@@ -111,8 +111,8 @@ article h1 {
   font-weight: 900;
 }
 
-article a {
-  color: #D95585;
+section a {
+  color: #4B89BF;
   text-decoration: underline;
 }
 
@@ -124,7 +124,13 @@ article a {
 
 #head-text h1 { margin-bottom: 10px; }
 
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content p { 
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content p { 
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -156,8 +162,9 @@ article a {
 
 .card-thumbnail img {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 360px;
+  height: 240px;
+  object-fit: cover;
   border-radius: 5px 5px 0 0;
 }
 
@@ -166,9 +173,14 @@ article a {
 }
 
 .card-title {
+  color: black;
+  text-decoration: none;
   margin-top: 5px;
   margin-bottom: 5px;
+  transition-duration: 0.5s;
 }
+
+.card-title:hover { color: #4B89BF; }
 
 .postinfo ul {
   margin: 0;

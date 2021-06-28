@@ -24,9 +24,9 @@
     </div>
   </div>
     <?php the_post_thumbnail() ?>
-    <article class="content">
+    <section class="content">
       <?php the_content(); ?>
-    </article>
+    </section>
   <?php else: ?>
     <!-- インデックス -->
     <?php if(have_posts()): ?>
