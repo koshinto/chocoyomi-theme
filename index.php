@@ -3,26 +3,30 @@
 <div class="container main">
   <?php if(is_single()): ?>
     <!-- 小ページ -->
-    <h1><?php the_title(); ?></h1>
-    <div class="postinfo">
-    <ul>
-      <li>
-        <span class="info-icon"><i class="far fa-calendar-alt"></i></span><?php the_time('Y年m月d日'); ?>
-      </li>
-      <li>
-        <span class="info-icon"><i class="fas fa-tag"></i></span><?php the_category(', ') ?>
-      </li>
-      <li>
-        <span class="info-icon"><i class="fas fa-user-alt"></i></span>
-        <?php
-          $author = get_userdata($post -> post_author);
-          echo $author->display_name;
-        ?>
-      </li>
-    </ul>
+    <div id="head-text">
+      <h1><?php the_title(); ?></h1>
+      <div class="postinfo">
+      <ul>
+        <li>
+          <span class="info-icon"><i class="far fa-calendar-alt"></i></span><?php the_time('Y年m月d日'); ?>
+        </li>
+        <li>
+          <span class="info-icon"><i class="fas fa-tag"></i></span><?php the_category(', ') ?>
+        </li>
+        <li>
+          <span class="info-icon"><i class="fas fa-user-alt"></i></span>
+          <?php
+            $author = get_userdata($post -> post_author);
+            echo $author->display_name;
+          ?>
+        </li>
+      </ul>
+    </div>
   </div>
     <?php the_post_thumbnail() ?>
-    <?php the_content(); ?>
+    <article class="content">
+      <?php the_content(); ?>
+    </article>
   <?php else: ?>
     <!-- インデックス -->
     <?php if(have_posts()): ?>

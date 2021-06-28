@@ -111,6 +111,29 @@ article h1 {
   font-weight: 900;
 }
 
+article a {
+  color: #D95585;
+  text-decoration: underline;
+}
+
+/* 小ページ */
+#head-text {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#head-text h1 { margin-bottom: 10px; }
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content p { 
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.wp-block-image {
+  margin: 0;
+  width: 100%;
+}
+
 /* 投稿 */
 .cardlayout {
   display: flex;
