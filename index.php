@@ -3,27 +3,29 @@
 <div class="container main">
   <?php if(is_single()): ?>
     <!-- 小ページ -->
-    <div id="head-text">
-      <h1><?php the_title(); ?></h1>
-      <div class="postinfo">
-      <ul>
-        <li>
-          <span class="info-icon"><i class="far fa-calendar-alt"></i></span><?php the_time('Y年m月d日'); ?>
-        </li>
-        <li>
-          <span class="info-icon"><i class="fas fa-tag"></i></span><?php the_category(', ') ?>
-        </li>
-        <li>
-          <span class="info-icon"><i class="fas fa-user-alt"></i></span>
-          <?php
-            $author = get_userdata($post -> post_author);
-            echo $author->display_name;
-          ?>
-        </li>
-      </ul>
-    </div>
-  </div>
-    <?php the_post_thumbnail() ?>
+    <section id="content-head">
+      <div id="head-text">
+        <h1 id="title"><?php the_title(); ?></h1>
+        <div class="postinfo">
+          <ul>
+            <li>
+              <span class="info-icon"><i class="far fa-calendar-alt"></i></span><?php the_time('Y年m月d日'); ?>
+            </li>
+            <li>
+              <span class="info-icon"><i class="fas fa-tag"></i></span><?php the_category(', ') ?>
+            </li>
+            <li>
+              <span class="info-icon"><i class="fas fa-user-alt"></i></span>
+              <?php
+                $author = get_userdata($post -> post_author);
+                echo $author->display_name;
+              ?>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="post-thumbnail"><?php the_post_thumbnail() ?></div>
+    </section>
     <section class="content">
       <?php the_content(); ?>
     </section>
@@ -52,7 +54,6 @@
                     </li>
                   </ul>
                 </div>
-                <p><?php the_excerpt(); ?></p>
                 <div class="user-reaction-wrap">
                   <div class="user-reaction user-reaction-comment">
                     <span class="user-reaction-icon"><i class="fas fa-comment"></i></span><?php comments_number('0', '1', '%'); ?>
