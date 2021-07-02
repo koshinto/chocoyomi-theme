@@ -29,6 +29,9 @@
     <section class="content">
       <?php the_content(); ?>
     </section>
+    <ul class="sidemenu">
+      <?php dynamic_sidebar(); ?>
+    </ul>
   <?php else: ?>
     <!-- インデックス -->
     <?php if(have_posts()): ?>
@@ -70,6 +73,11 @@
         <?php endwhile; ?>
       </div>
     <?php endif; ?>
+  <?php endif; ?>
+
+  <!-- ページネーション -->
+  <?php if($wp_query->max_num_pages > 1): ?>
+    
   <?php endif; ?>
 </div>
 <?php get_footer(); ?>
