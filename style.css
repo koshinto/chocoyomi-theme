@@ -155,9 +155,9 @@ header a { text-decoration: none; }
 
 .category-event a:hover { color: #ffed71; }
 
-.category-life { border-bottom: #ffbe4e 3px solid; }
+.category-living { border-bottom: #ffbe4e 3px solid; }
 
-.category-life a:hover { color: #ffbe4e; }
+.category-living a:hover { color: #ffbe4e; }
 
 .category-culture { border-bottom: #ff7050 3px solid; }
 

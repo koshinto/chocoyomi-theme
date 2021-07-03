@@ -29,7 +29,7 @@
       <li class="category category-location"><a href="<?php echo home_url(); ?>">地域別<i class="fas fa-caret-down"></i></li></a>
       <li class="category category-news"><a href="#">ニュース</li></a>
       <li class="category category-event"><a href="#">イベント</li></a>
-      <li class="category category-life"><a href="#">暮らし</li></a>
+      <li class="category category-living"><a href="#">暮らし</li></a>
       <li class="category category-culture"><a href="#">カルチャー</li></a>
       <li class="category category-news"><a href="#">スポーツ</li></a>
     </ul>
