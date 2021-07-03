@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">  <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
   <script src="https://kit.fontawesome.com/f2989748a4.js" crossorigin="anonymous"></script>
   <title><?php bloginfo('name');?> <?php wp_title(); ?></title>
   <?php wp_head(); ?>
@@ -17,7 +17,7 @@
 <header>
   <div class="blogtitle container">
     <h1><a href="<?php echo home_url(); ?>">
-      <span class="headertext1">Chocoyomi</span><span class="headertext2">WebMagazine</span>
+      <img id="logo" src="<?php bloginfo('template_url'); ?>/assets/forLight.svg" />
     </a></h1>
     <ul id="share-button">
       <li><a href="https://twitter.com/intent/tweet?text=<?php bloginfo('name'); ?> <?php echo get_site_url(); ?> <twitter account>"><i class="fab fa-twitter"></i></a></li>
@@ -25,6 +25,13 @@
       <li><a href="https://social-plugins.line.me/lineit/share?url=https://www.yns-sanda.jp/"><i class="fab fa-line"></i></a></li>
       <!-- <li><a href="https://social-plugins.line.me/lineit/share?url={encodeURIComponent(URL)}"><i class="fab fa-line"></i></a></li> -->
     </ul>
-    <p>メニュー</p>
+    <ul id="categories">
+      <li class="category category-location"><a href="<?php echo home_url(); ?>">地域別<i class="fas fa-caret-down"></i></li></a>
+      <li class="category category-news"><a href="#">ニュース</li></a>
+      <li class="category category-event"><a href="#">イベント</li></a>
+      <li class="category category-life"><a href="#">暮らし</li></a>
+      <li class="category category-culture"><a href="#">カルチャー</li></a>
+      <li class="category category-news"><a href="#">スポーツ</li></a>
+    </ul>
   </div>
 </header>
