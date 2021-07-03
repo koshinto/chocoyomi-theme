@@ -27,11 +27,11 @@
     </ul>
     <ul id="categories">
       <li class="category category-location"><a href="<?php echo home_url(); ?>">地域別<i class="fas fa-caret-down"></i></li></a>
-      <li class="category category-news"><a href="#">ニュース</li></a>
-      <li class="category category-event"><a href="#">イベント</li></a>
-      <li class="category category-living"><a href="#">暮らし</li></a>
-      <li class="category category-culture"><a href="#">カルチャー</li></a>
-      <li class="category category-news"><a href="#">スポーツ</li></a>
+      <li class="category category-news"><a href="<?php echo get_category_url("ニュース"); ?>">ニュース</li></a>
+      <li class="category category-event"><a href="<?php echo get_category_url("イベント"); ?>">イベント</li></a>
+      <li class="category category-living"><a href="<?php echo get_category_url("暮らし"); ?>">暮らし</li></a>
+      <li class="category category-culture"><a href="<?php echo get_category_url("カルチャー"); ?>">カルチャー</li></a>
+      <li class="category category-news"><a href="<?php echo get_category_url("スポーツ"); ?>">スポーツ</li></a>
     </ul>
   </div>
 </header>

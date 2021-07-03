@@ -13,3 +13,9 @@ function mb_length($length) {
   return 55;
 }
 add_filter('excerpt_mblength', 'mb_length');
+
+// カテゴリーのURL
+function get_category_url($category_name) {
+  $category_id = get_cat_ID($category_name);
+  return get_category_link($category_id);
+} 
